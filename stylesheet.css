@@ -1,0 +1,35 @@
+body {
+	font: 11px/15px Verdana, Sans-Serif;
+}
+img { border: 0; }
+
+td { padding: 3px; }
+
+#navigation {
+	list-style-type: none;
+	margin: 0; 
+	padding: 0;
+}
+	#navigation li {
+		display: inline;
+		padding: 2px 8px;
+	}
+
+/* control row colours in admin */
+.literow { background: #fff; }
+.darkrow { background: #ddd; }
+
+/* error/success msg colours on forms */
+p.error, p.success {
+	font-weight: bold;
+	padding: 10px;
+	border: 1px solid;
+}
+p.error {
+	background: #ffc0c0;
+	color: #900;
+}
+p.success {
+	background: #b3ff69;
+	color: #4fa000;
+}
