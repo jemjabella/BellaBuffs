@@ -135,11 +135,12 @@ BellaBuffs so each fanlisting has to be managed through it's own admin panel.
 //--------------------
 // FIXES IN VERS 2
 //--------------------
-- Update to countries list, as provided by Haley
-- Updated contact form based on latest vers of Jem's PHP Mail Form (jemsmailform.com)
-- New functions in functions.php for contact.php
-- Updated join form to fix deprecated ereg errors + update spammy checks
-- $maxpoints added to prefs.php
+2.1 - fix stray curly braces in join.php
+2.0 - Update to countries list, as provided by Haley
+2.0 - Updated contact form based on latest vers of Jem's PHP Mail Form (jemsmailform.com)
+2.0 - New functions in functions.php for contact.php
+2.0 - Updated join form to fix deprecated ereg errors + update spammy checks
+2.0 - $maxpoints added to prefs.php
 
 
 //--------------------
