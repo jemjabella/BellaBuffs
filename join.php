@@ -69,13 +69,13 @@ if (isset($_POST['submit'])) {
 		$error_msg .= "That name is not valid. Your name must contain letters only, and must be less than 15 characters. \r\n";
 	if ($clean['dispemail'] != "yes" && $clean['dispemail'] != "no")
 		$error_msg .= "You didn't choose whether or not you'd like to show your e-mail address on the member list. \r\n";
-	if ($clean['fave'] != "" && (!preg_match("/^[a-zA-Z0-9-'\s]*$/", $clean['face']) || strlen($clean['fave']) > 20)) {
+	if ($clean['fave'] != "" && (!preg_match("/^[a-zA-Z0-9-'\s]*$/", $clean['face']) || strlen($clean['fave']) > 20))
 		$error_msg .= "Your chosen \"favourite\" is not valid. It must contain letters and numbers only, and must be less than 20 characters. \r\n";
 	if (!preg_match('/^([a-z0-9])(([-a-z0-9._])*([a-z0-9]))*\@([a-z0-9])(([a-z0-9-])*([a-z0-9]))+' . '(\.([a-z0-9])([-a-z0-9_-])?([a-z0-9])+)+$/i', strtolower($clean['email'])))
 		$error_msg .= "The email address you have used is not valid. \r\n";
 	if (!empty($clean['url']) && !preg_match('/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i', $clean['url']))
 		$error_msg .= "The website url you provided is not valid. Please remove and try again or fix the URL.\r\n";
-	if ($clean['country'] == "null" || (filesize(COUNTRIES) > 0 && checkTXTfile(COUNTRIES, $clean['country'], "country") === false)) {
+	if ($clean['country'] == "null" || (filesize(COUNTRIES) > 0 && checkTXTfile(COUNTRIES, $clean['country'], "country") === false))
 		$error_msg .= "Please select a valid country. \r\n";
 	
 	if (filesize(IPBLOCKLST) > 0 && checkTXTfile(IPBLOCKLST, $_SERVER['REMOTE_ADDR'], "ip") === true) {
