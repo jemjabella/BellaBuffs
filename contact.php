@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	$points = (int)0;
 
 	$badwords = file(SPAMWDS);
+	$requiredFields = array("name", "email", "comments");
 
 	foreach ($badwords as $word)
 		if (
@@ -52,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		$message = "You received this e-mail message through your fanlisting: \n\n";
 		foreach ($_POST as $key => $val) {
-			$message .= ucwords($key) . ": " . clean($val) . "\r\n";
+			$message .= ucwords($key) . ": " . cleanUp($val) . "\r\n";
 		}
 		$message .= "\r\n";
 		$message .= 'IP: '.$_SERVER['REMOTE_ADDR']."\r\n";

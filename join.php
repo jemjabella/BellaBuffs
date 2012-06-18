@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
 		$error_msg .= "That name is not valid. Your name must contain letters only, and must be less than 15 characters. \r\n";
 	if ($clean['dispemail'] != "yes" && $clean['dispemail'] != "no")
 		$error_msg .= "You didn't choose whether or not you'd like to show your e-mail address on the member list. \r\n";
-	if ($clean['fave'] != "" && (!preg_match("/^[a-zA-Z0-9-'\s]*$/", $clean['face']) || strlen($clean['fave']) > 20))
+	if ($clean['fave'] != "" && (!preg_match("/^[a-zA-Z0-9-'\s]*$/", $clean['fave']) || strlen($clean['fave']) > 20))
 		$error_msg .= "Your chosen \"favourite\" is not valid. It must contain letters and numbers only, and must be less than 20 characters. \r\n";
 	if (!preg_match('/^([a-z0-9])(([-a-z0-9._])*([a-z0-9]))*\@([a-z0-9])(([a-z0-9-])*([a-z0-9]))+' . '(\.([a-z0-9])([-a-z0-9_-])?([a-z0-9])+)+$/i', strtolower($clean['email'])))
 		$error_msg .= "The email address you have used is not valid. \r\n";
@@ -175,7 +175,7 @@ if (!isset($_POST['submit']) || $show_form == true) {
 	if (isset($_POST['country'])) $country = $_POST['country']; else $country = NULL;
 ?>
 
-<form action="join.php?p=process" method="post"><p>
+<form action="join.php" method="post"><p>
 	<label>Name *</label><br /> <input type="text" id="name" name="name" value="<?php get_data("name"); ?>" /> <br />
 	<label>E-mail *</label><br /> <input type="text" id="email" name="email" value="<?php get_data("email"); ?>" /> <br />
 	<label>Display E-mail?</label><br />
