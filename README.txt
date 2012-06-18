@@ -135,6 +135,8 @@ BellaBuffs so each fanlisting has to be managed through it's own admin panel.
 //--------------------
 // FIXES IN VERS 2
 //--------------------
+2.2 - re-roll fixes to update.php (matching join.php)
+2.2 - fix typos in contact.php / join.php
 2.1 - fix stray curly braces in join.php
 2.0 - Update to countries list, as provided by Haley
 2.0 - Updated contact form based on latest vers of Jem's PHP Mail Form (jemsmailform.com)
